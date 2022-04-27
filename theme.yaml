@@ -1,0 +1,18 @@
+# theme.yaml configuration file
+
+name: Ruby
+license: GPLv3
+licenselink: https://github.com/doabell/hugo-ruby/blob/main/LICENSE
+description: Hugo Component for the HTML tag `<ruby>`.
+homepage: https://github.com/doabell/hugo-ruby
+tags:
+  - component
+  - ruby
+features:
+  - Shortcode to use `<ruby>`
+  - Supports named and unnamed parameters
+min_version: 0.40.0
+
+author:
+  name: doabell
+  homepage: https://github.com/doabell/
