@@ -1,15 +1,14 @@
-<span>
-    <ruby>
-        {{ if .IsNamedParams }}
-            {{ .Get "rb" }}
-            <rp>(</rp>
-            <rt>{{ .Get "rt" }}</rt>
-            <rp>)</rp>
-        {{ else }}
-            {{ .Get 0 }}
-            <rp>(</rp>
-            <rt>{{ .Get 1 }}</rt>
-            <rp>)</rp>
-        {{ end }}
-    </ruby>
-</span>
+<ruby>
+    {{ if .IsNamedParams }}
+        {{- .Get "rb" | markdownify -}}
+        <rp>(</rp>
+        <rt>{{- .Get "rt" | markdownify -}}</rt>
+        <rp>)</rp>
+    {{ else }}
+        {{- .Get 0 | markdownify -}}
+        <rp>(</rp>
+        <rt>{{- .Get 1 | markdownify -}}</rt>
+        <rp>)</rp>
+    {{ end }}
+</ruby>
+{{- print "" -}}
